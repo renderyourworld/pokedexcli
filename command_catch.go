@@ -29,6 +29,7 @@ func commandCatch(cfg *config, args ...string) error {
 	fmt.Printf("Throwing a Pokeball at %s...\n", pokemonResp.Name)
 	if catch(pokemonResp.BaseExperience) {
 		fmt.Printf("%s was caught!\n", pokemonResp.Name)
+		fmt.Printf("You can inspect it with: inspect %s\n", pokemonResp.Name)
 
 		// Add to pokedex
 		cfg.pokedex[pokemonResp.Name] = pokemonResp
